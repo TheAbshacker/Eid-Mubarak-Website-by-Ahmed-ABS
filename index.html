@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Message</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        .container {
+            border: 2px solid #ffa500;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .sheep {
+            width: 200px;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ffa500;
+            border-radius: 5px;
+            width: calc(100% - 24px);
+        }
+        button {
+            background-color: #ffeb3b;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #fdd835;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ffa500;
+        }
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.2em;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr140KP3iqVXAZmrlBhl3tDpVURik4sTw4w5Q_b-USRg&s" alt="Lovely Sheep" class="sheep">
+        <div class="input-container">
+            <label for="name" class="arabic-text">اكتب اسمك</label>
+            <input type="text" id="name" placeholder="ما هو إسمك">
+        </div>
+        <button onclick="showMagic()">هدية لك</button>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        function showMagic() {
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message');
+            if (name) {
+                message.textContent = `عيد مبارك يا ${name}`;
+            } else {
+                message.textContent = 'أكتب إسمك';
+            }
+        }
+    <footer>Eid mubarak website // Made by @AhmedABS</footer>
+    </script>
+</body>
+</html>
